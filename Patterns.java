@@ -7,7 +7,7 @@ public class Patterns{
 		for(int number = 1; number < i; number++){
 		System.out.print("*");
 		}
-		System.out.print\t();
+		System.out.println();
 	}
 
 
@@ -16,7 +16,7 @@ public class Patterns{
 		for(int number = 1; number <= i; number++){	
 		System.out.print("*");
 		}
-		System.out.print\t();
+		System.out.println();
 	}
 
 		
@@ -29,7 +29,7 @@ public class Patterns{
 		for (int number = 1; number <= i ; number++){
 			System.out.print("*");
 		}
-		System.out.print\t();
+		System.out.println();
 		}
 	System.out.println("Pattern D");
 	for (int i = 7; i >= 1; i--){
@@ -39,7 +39,7 @@ public class Patterns{
 	for (int number = 1; number <= i; number++){
 	System.out.print("*");
 	}
-	System.out.print\t();
+	System.out.println();
 	}
 }
 	

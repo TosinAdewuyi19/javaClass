@@ -1,0 +1,7 @@
+pseudocode for largest number
+
+1) Declare and initialize an array of int
+2) Initialize variable Largest
+3) Loop through the array.
+4) If the current element is greater than largest, update largest with the current element
+5) Print the value of largest 

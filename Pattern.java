@@ -12,7 +12,7 @@ public static void main(String[] args) {
       	}  
     
         for (int count = 1; count <= counter; count++) {
-            System.out.print("@");
+            System.out.print(count);
             }  System.out.println();
      }  
   }

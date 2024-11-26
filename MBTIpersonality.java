@@ -63,7 +63,7 @@ public class MBTIPersonalityTest {
             (counts[1] > 2 ? "S" : "N") +
             (counts[2] > 2 ? "T" : "F") +
             (counts[3] > 2 ? "J" : "P");
-
+    
         System.out.println( name + "Your test result shows hat your MBTI type is: " + mbtiType);
 
          switch (mbtiType) {

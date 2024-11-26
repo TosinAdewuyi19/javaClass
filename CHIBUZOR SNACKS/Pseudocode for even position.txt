@@ -1,0 +1,6 @@
+Pseudocode for even position
+
+1)Initialize an array of 5 digits.
+2) Loop through the length of the array to find which digit is in an odd position base on their index.
+3) Check if the index divided by 2 is equal to 0.
+4)Print result

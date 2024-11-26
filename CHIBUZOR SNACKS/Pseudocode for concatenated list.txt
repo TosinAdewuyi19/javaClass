@@ -1,0 +1,6 @@
+Pseudocode for concatenated list
+
+1) Initialize variables for both list as list1, and list2
+2) Initialize a variable to store the concatenated list(both list combined)
+3) loop through the concatenated list
+4) Print the result.   

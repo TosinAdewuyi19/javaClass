@@ -3,7 +3,7 @@ public class SumOfArray {
 public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter the size of the array: ");
+        System.out.println ("Enter the size of the array: ");
         int size = input.nextInt();
     
     int array[] = new int [size];
@@ -16,6 +16,6 @@ public static void main(String[] args) {
     for (int count = 0; count < array.length; count++) {
         sum = sum + array[count];
      }
-     System.out.println("sum =" + sum);
+     System.out.println("You are clever! sum is = " + sum);
    }
 } 

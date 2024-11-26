@@ -1,0 +1,9 @@
+Pseudocode for list of digits
+
+1) Initialize number.
+2) call the function.
+3) Convert the input into string
+4) Create an array digits of the same length of the string
+5) Use loop to iterate every each of the string
+6) Store as digits
+7) returns digits
