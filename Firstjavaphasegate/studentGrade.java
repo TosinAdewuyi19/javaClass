@@ -2,25 +2,37 @@ import java.util.Scanner;
 import java.util.ArrayList;
 public class studentGrade {
 
+
+
 public static void main(String[] args) {
-	int numberOfStudents = 0;
-	int numberOfSubject = 0;
+Scanner input = new Scanner(System.in);
 
 
-int [][] studentGrade = new int[numberOfStudents][numberOfSubject]; 
-	
-	Scanner input = new Scanner(System.in);
-		for (int count = 0; count < studentGrade; count++) {
-			for (int counter = 0; counter < studentGrade; counter++) {
-				System.out.print("How many students do you have?: ");
-					numberOfStudents = input.nextInt();
+int numberofstudents = 1;
+int numberofsubjects = 1;  
 
-				System.out.print("How many subject dothey offer?: ");
-					numberOfSubject = input.nextInt();
 
-}
-				
-	
+
+		
+int[][] array = new int[numberofstudents][numberofsubjects];
+
+			System.out.println("How many students do you have?: ");
+			numberofstudents = input.nextInt();
+			System.out.println("How many subjects do they offer?: ");
+			numberofsubjects = input.nextInt();
+			System.out.println("Saving >>>>>>>>>>>>>>>");
+			System.out.println("Saved successfully");
+			
+
+	for (int count = 0; count < numberofstudents; count++) {
+		for (int counter = 0; counter < numberofsubjects; counter++) {
+			System.out.println("Entering score for student " + count +" >>> ");
+			System.out.print("Enter score for subject " + counter + ": ");
+			int score = input.nextInt();}
+
+			//System.out.println("Saving >>>>>>>>>>>>>>>");
+			System.out.println("Saved successfully");
+
 }
     }
 } 
