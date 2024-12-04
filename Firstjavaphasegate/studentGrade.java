@@ -7,15 +7,7 @@ public class studentGrade {
 public static void main(String[] args) {
 Scanner input = new Scanner(System.in);
 
-
-/*int numberofstudents = 1;
-int numberofsubjects = 1;
-double average = 0;
-double totalscore = 0;*/
-
-		
-
-
+	 
 
 		System.out.println("How many students do you have?: ");
 			int numberofstudents = input.nextInt();
@@ -42,10 +34,11 @@ double totalscore = 0;*/
 					
 				average[count] = totalscore / numberofsubjects;
 		
-		}		
-				
-				for (int subject = 0; subject < numberofstudents; subject++)
-						System.out.print("SUB " + (subject + 1)); 
+		}		System.out.print("=========================================");
+				System.out.print("STUDENT                    "); 
+					for (int subject = 0; subject < numberofstudents; subject++) {
+						System.out.print("SUB " + (subject + 1));
+}						
 		
 			System.out.println("==================================================");
 			System.out.printf("%n%s %n%s %n%s %n%s\n",  "STUDET \tsubject \tTOT\taverage \tPOS");
