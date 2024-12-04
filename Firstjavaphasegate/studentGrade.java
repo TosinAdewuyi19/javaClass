@@ -8,7 +8,7 @@ public static void main(String[] args) {
 Scanner input = new Scanner(System.in);
 
 	 
-
+		
 		System.out.println("How many students do you have?: ");
 			int numberofstudents = input.nextInt();
 		System.out.println("How many subjects do they offer?: ");
@@ -34,17 +34,18 @@ Scanner input = new Scanner(System.in);
 					
 				average[count] = totalscore / numberofsubjects;
 		
-		}		System.out.print("=========================================");
-				System.out.print("STUDENT                    "); 
-					for (int subject = 0; subject < numberofstudents; subject++) {
-						System.out.print("SUB " + (subject + 1));
+		}		System.out.println("====================================================");
+				System.out.print("STUDENT      "); 
+				for (int subject = 0; subject < numberofstudents; subject++) {
+					System.out.print("SUB "  + (subject + 1) + "\t");
 }						
-		
-			System.out.println("==================================================");
-			System.out.printf("%n%s %n%s %n%s %n%s\n",  "STUDET \tsubject \tTOT\taverage \tPOS");
-			System.out.println("==================================================");	
+				System.out.print("TOT\t");
+				System.out.print("AVE\t");
+				System.out.println("POS\t");
+				System.out.println("=====================================================");
+				System.out.println("=====================================================");
 				
-
+		
     }
 } 
 
