@@ -14,22 +14,8 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class creditCardValidator {
-public static void main(String[] args) {
-Scanner input = new Scanner(System.in);
-
-	System.out.print("Enter creditcard numebr: ");
-	String cardNumber = input.nextLine();
-	
-		String cardType = getCardType(cardNumber);
-		boolean isValid = isValidCardNumber(cardNumber);
-		
-			System.out.println("card Type: " + cardType);
-			System.out.println("Validity: " + (isValid? "Valid" : "Invalid"));
-	}
 
 
- 
-	
 public static String getCardType(String cardNumber) {
 	int length = cardNumber.length();
 
@@ -42,39 +28,55 @@ public static String getCardType(String cardNumber) {
 	}else if (cardNumber.startsWith("37") && (length == 13 || length == 16)) {
 			return "American Expresss Cards";
 	
-	}else if (cardNumber .startsWith("6") && (length == 13 || length == 16)) {
+	}else if (cardNumber.startsWith("6") && (length == 13 || length == 16)) {
 			return "Discover cards";
 	}else {
-			return "Invalid Card Type";
-	} 
-}
-public static boolean isValidCardNumber(String cardNumber, String cardType) {
-	int[] digits = new int[cardNumber.length()];
-	for (int count = 0; count < cardNumber.length(); count++){
-		digits[count] = Character.getNumericValue(cardNumber.charAt(count));
+			return "Invalid Card";
 	}
+
+    }
+
+
+public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your credit card number: ");
+        String cardNumber = scanner.nextLine();
+	System.out.println(" ");
 	
-	for (int count = digits.length - 2; count >= 0; count -= 2){
-		digits[count] *= 2;
-		if (digits[count] > 9){
-			digits[count] = digits[count] / 10 +  digits[count] % 10;
-		}
-	}
-	
+
+        String cardType = getCardType(cardNumber);
+	int cardLength = cardNumber.length();
+
+        int[] digits = new int[cardNumber.length()];
+        for (int count = 0; count < cardNumber.length(); count++) {
+            digits[count] = Character.getNumericValue(cardNumber.charAt(count));
+        }
+
 	int sum = 0;
-	for (int count = digits.length - 1; count >=0; count -=2){
-		sum += Character.getNumericValue(cardNumber.charAt(count));
-		
-		String isValidString  = sum %10 == 0;
-	
-	System.out.println("card Type: " + cardType);
-	System.out.println("Validity: " + (isValid? "Valid" : "Invalid"));
-	
-	
+        boolean alternate = false;
+        for (int count = digits.length - 1; count >= 0; count--) {
+            int counter = digits[count];
+            if (alternate) {
+                counter *= 2;
+                if (counter > 9) {
+                    counter = (counter % 10) + 1;
+                }
+            }
+            sum += counter;
+            alternate = !alternate;
 
+	}
+
+	  boolean isValid = (sum % 10 == 0);
+	
+	System.out.println("**********************************");
+        System.out.println("**Card Type: " + cardType);
+	System.out.println("**Card Number: " + cardNumber);
+	System.out.println("**Credit Card Length: " + cardLength);
+        System.out.println("**Validity: " + (isValid ? "Valid" : "Invalid"));
+	System.out.print("**********************************");
+    }	 
+	  
 }
-
-}
-
  
 	 
