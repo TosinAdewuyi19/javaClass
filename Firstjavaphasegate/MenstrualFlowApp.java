@@ -9,17 +9,17 @@ public class menstrualFlowApp {
         String name = input.nextLine();
 		System.out.println(" ");
 		
-		System.out.printf("Hello %s, Here is a breif lecture on Menstrual cycle: The menstrual cycle cycle consists of four phases %n", name);
+		System.out.printf ("Hello %s, Here is a brief lecture on Menstrual Cycle: The menstrual cycle consists of four phases. %n", name);
 		System.out.println(" ");
-		System.out.println("Stage 1: Menstruation: This is a stage where the Uterus lining is shed, usualy last for (3 to 5 days");
+		System.out.println("Stage 1: Menstruation: This is the stage where the uterus lining is shed, usually lasts for 3 to 5 days.");
 		System.out.println(" ");
-		System.out.println("Stage 2: Follicular phase: This is a stage where primary follicle develops into a mature Graffian follicle, and the endometrium proliferates.");
+		System.out.println("Stage 2: Follicular phase: This is  the second step where primary follicle develops into a mature Graffian follicle, and the endometrium proliferates.");
 		System.out.println(" ");
-		System.out.println("Stage 3: Ovulatiry phase: This is the mid-cycle phase when ovulation occours(around da 13-17)");
+		System.out.println("Stage 3: Ovulatory phase: This is the mid-cycle phase when ovulation occurs (around days 13-17).");
 		System.out.println(" ");
-		System.out.println("Stage 4: Luteal phase: In this phase, the follicle that release the egg produces hormone that thicken the ripen of the uterus to get it ready for pregnancy.");
+		System.out.println("Stage 4: Luteal phase: In this phase, the follicle that releases the egg produces hormones that thicken the ripening of the uterus to get it ready for pregnancy.");
 		System.out.println(" ");
-		System.out.println("NOTE!!!: Every woman's menstrual cycle is unique, the lengthof each cycle and its phases can vary base on your age and other factors, so it is mportant for you to get familiar with your cycle");
+		System.out.println("NOTE!!!: Every woman's menstrual cycle is unique, the length of each cycle and its phases can vary based on genetics and other factors. So it is important for you to get familiar with your cycle.");
 		System.out.println(" ");
 
         System.out.print("Enter the first day of your last menstrual cycle (DD): ");
@@ -49,8 +49,8 @@ public class menstrualFlowApp {
             currentYear = nextDate[2];
         }
 
-        int[] ovulationStart = addDays(currentDate, currentMonth, currentYear, 12);
-        int[] ovulationEnd = addDays(currentDate, currentMonth, currentYear, 16);
+        int[] ovulationStart = addDays(currentDate, currentMonth, currentYear, 3);
+        int[] ovulationEnd = addDays(currentDate, currentMonth, currentYear, 9);
 
         System.out.println("Ovulation period:");
         System.out.printf("Start: %02d-%02d-%d%n", ovulationStart[0], ovulationStart[1], ovulationStart[2]);
@@ -75,7 +75,7 @@ public class menstrualFlowApp {
                 day = 1;
                 month++;
                 if (month > 12) {
-                    month = 1;
+                    month = 0;
                     year++;
                     if (isLeapYear(year)) {
                         daysInMonth[1] = 29;
