@@ -17,21 +17,21 @@ public class CompoundInterestCalculator {
         System.out.print(" Your Estimated Interest Rate\nYour Estimated Annual Interest Rate: ");
         double annualInterestRate = input.nextDouble();
         System.out.println("Interest Rate Variance Range\nRange of interest rate (above and below the rate set above) that you desire to see result for.: ");
-        double rateRange = input.nextDouble();
+        double varianceRange = input.nextDouble();
 
-        double totalAmount = calculateCompoundInterest(initialInvestment, monthlyContribution, annualInterestRate, year, rateRange);
+        double totalAmount = calculateCompoundInterest(initialInvestment, monthlyContribution, annualInterestRate, year, varianceRange);
         System.out.printf("Total Amount of Interest Rate: %.2f\n", totalAmount);
 
 
     }
 
-    private static double calculateCompoundInterest(double principal, double monthlyContribution, double annualInterestRate, int year, double rateRange) {
-        double ratePerPeriod = annualInterestRate / 100 / rateRange;
-        int totalPeriod = (int) (year * rateRange);
-        int totalAmount = (int) principal;
+    private static double calculateCompoundInterest(double initialInvestment, double monthlyContribution, double annualInterestRate, int year, double varianceRange ) {
+        double ratePerPeriod = annualInterestRate / 100 / varianceRange;
+        int totalPeriod = (int) (year * varianceRange);
+        int totalAmount = (int) initialInvestment;
 
         for (int i = 0; i < totalPeriod; i++) {
-            totalAmount += (int) (monthlyContribution * 12 / rateRange);
+            totalAmount += (int) (monthlyContribution * 12 / varianceRange);
             totalAmount *= (ratePerPeriod);
 
 
