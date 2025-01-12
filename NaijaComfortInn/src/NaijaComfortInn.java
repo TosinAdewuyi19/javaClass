@@ -165,7 +165,6 @@ class HotelSystem {
         System.out.println("No guest found for room number " + roomNumber);
     }
 
-    // Additional methods for assignRole, generateReport, sendNotification, and simulateMaintenance can be added here.
 }
 
 public class NaijaComfortInn {
@@ -185,7 +184,7 @@ public class NaijaComfortInn {
             System.out.print("Enter choice: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1:
