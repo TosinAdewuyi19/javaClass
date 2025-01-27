@@ -1,10 +1,12 @@
-import java.util.*;
+import java.util.scanner;
+import java.util.ArrayList;
 public class userDiary {
 	private static String diaryPassword = "defaultPassword";
 	private static boolean isLocked = false;
 	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
 		boolean exit = false;
+		
 		
 	while (!exit) {
 		System.out.println("User Diary");
@@ -53,8 +55,11 @@ public class userDiary {
 	}
 	}
 	
+	public diary() {
+	String[]  entries = new ArrayList<>();
+	
 	public static void createDiary(Scanner input) {
-	System.out.print("Diary name: ");
+	System.out.print("Enter Diary ID: ");
 	String diaryName = input.nextLine();
 	System.out.print("Diary '" + diaryName + "' created.");
 	   
@@ -98,7 +103,7 @@ public class userDiary {
 			System.out.println("Diary is locked. Please enter password to unlock");
 			return;
 		}
-		System.out.println("Delete Entry");
+		System.out.println("Enter Diary Entry to delete ");
 	}
 	
 	public static void findEntry() {

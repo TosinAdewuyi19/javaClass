@@ -16,10 +16,12 @@ class Room {
     }
 
     public void markAsOccupied() {
+
         this.isAvailable = false;
     }
 
     public void markAsAvailable() {
+
         this.isAvailable = true;
     }
 
@@ -29,18 +31,22 @@ class Room {
     }
 
     public boolean isAvailable() {
+
         return isAvailable && !needsMaintenance;
     }
 
     public String getRoomType() {
+
         return roomType;
     }
 
     public double getPricePerNight() {
+
         return pricePerNight;
     }
 
     public int getRoomNumber() {
+
         return roomNumber;
     }
 
@@ -68,6 +74,7 @@ class Guest {
     }
 
     public String getBookingReference() {
+
         return bookingReference;
     }
 }
@@ -93,6 +100,7 @@ class Booking {
     }
 
     public void cancelBooking() {
+
         room.markAsAvailable();
     }
 
@@ -105,7 +113,6 @@ class Booking {
 class HotelSystem {
     private List<Room> rooms = new ArrayList<>();
     private List<Booking> bookings = new ArrayList<>();
-    private List<String> admins = new ArrayList<>();
     private double festivePeriodMultiplier = 1.2;
 
     public void initializeRooms() {
@@ -164,7 +171,6 @@ class HotelSystem {
         }
         System.out.println("No guest found for room number " + roomNumber);
     }
-
 }
 
 public class NaijaComfortInn {
@@ -175,7 +181,8 @@ public class NaijaComfortInn {
         boolean running = true;
 
         while (running) {
-            System.out.println("\nMenu:");
+            System.out.println("\nWelcome to Naija Comfort Inn\n");
+            System.out.println("Menu:");
             System.out.println("1. Book Room");
             System.out.println("2. View Available Rooms");
             System.out.println("3. Cancel Booking");
@@ -184,7 +191,7 @@ public class NaijaComfortInn {
             System.out.print("Enter choice: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); 
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -198,9 +205,9 @@ public class NaijaComfortInn {
                     String roomType = scanner.nextLine();
                     System.out.print("Enter number of nights: ");
                     int nights = scanner.nextInt();
-                    scanner.nextLine();
                     System.out.print("Is it a festive period? (true/false): ");
                     boolean festivePeriod = scanner.nextBoolean();
+                    scanner.nextLine();
                     hotelSystem.bookRoom(name, phone, email, roomType, nights, festivePeriod);
                     break;
                 case 2:
